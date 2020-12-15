@@ -2,6 +2,15 @@
 // and returns the sum of its cubes.
 
 const sumOfCubes = function (arr) {
+    let sum = 0;
+
+    for (i = 0; i < arr.length; i++) {
+        let cubedNumber = arr[i] * arr[i] * arr[i];
+        sum += cubedNumber;
+    }
+
+
+    return sum;
 
 }
 

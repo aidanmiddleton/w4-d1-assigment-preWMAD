@@ -2,8 +2,51 @@
 // if not enough numbers return "Improper Input"
 
 const conditionalAdding = function(values, condition) {
-    // Your code here
-  };
+
+  if (values.length === 0) {
+    return "Improper Input";
+  }
+
+  let oddSum = 0;
+  let evenSum = 0;
+
+  for (i = 0; i < values.length; i++) {
+    if (values[i] % 2 === 0) {
+      evenSum += values[i];
+    } else {
+      oddSum += values[i];
+    }
+  }
+
+  if (condition === 'even') {
+    return evenSum;
+  } else {
+    return oddSum;
+  }
+
+  // let result = 0;
+  
+  // if(condition === "even") {
+  //   for (i = 0; i < values.length; i++) {
+  //     if (values[i] % 2 === 0) {
+  //       result += values[i];
+  //     }
+  //   }
+  // }
+
+  // if(condition === "odd") {
+  //   for (i = 0; i < values.length; i++) {
+  //     if (values[i] % 2 !== 0) {
+  //       result += values[i];
+  //     }
+  //   }
+  // }
+
+  // return result;
+
+
+
+};
   
   console.log(conditionalAdding([1, 2, 3, 4, 5], "even"));
   // should return 6
